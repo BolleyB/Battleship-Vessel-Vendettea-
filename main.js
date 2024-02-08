@@ -17,12 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Ship definitions
     const shipArray = [
-        { name: 'destroyer', length: 2 },
-        { name: 'submarine', length: 3 },
-        { name: 'cruiser', length: 3 },
-        { name: 'battleship', length: 4 },
-        { name: 'carrier', length: 5 }
+        { name: 'destroyer', length: 2, directions: [[0, 1], [1, width]] },
+        { name: 'submarine', length: 3, directions: [[0, 1, 2], [1, width, width*2]] },
+        { name: 'cruiser', length: 3, directions: [[0, 1, 2], [1, width, width*2]] },
+        { name: 'battleship', length: 4, directions: [[0, 1, 2, 3], [1, width, width*2, width*3]] },
+        { name: 'carrier', length: 5, directions: [[0, 1, 2, 3, 4], [1, width, width*2, width*3, width*4]] }
     ];
+    
 
     // Initialize game
     function init() {
@@ -48,32 +49,43 @@ document.addEventListener('DOMContentLoaded', () => {
         playGame();
     }
 
-    // Generate random ship placements
     function generateRandomShips() {
         shipArray.forEach(ship => {
-            let randomDirection = Math.floor(Math.random() * 2); // 0 for horizontal, 1 for vertical
-            let current = ship.directions[randomDirection];
-            let randomStart = Math.floor(Math.random() * userSquares.length);
-
-            const isTaken = current.some(index => userSquares[randomStart + index].classList.contains('taken'));
-            const isAtRightEdge = current.some(index => (randomStart + index) % width === width - 1);
-            const isAtLeftEdge = current.some(index => (randomStart + index) % width === 0);
-
-            if (!isTaken && !(isAtRightEdge && isAtLeftEdge)) {
-                current.forEach(index => userSquares[randomStart + index].classList.add('taken', ship.name));
-            } else {
-                generateRandomShips(); // Recursive call on invalid placement
-            }
+            let randomDirection, current, randomStart, isTaken, isAtRightEdge, isAtLeftEdge;
+    
+            // Try to place the ship until successful
+            do {
+                randomDirection = Math.floor(Math.random() * 2); // 0 for horizontal, 1 for vertical
+                current = ship.directions[randomDirection];
+                randomStart = Math.floor(Math.random() * (userSquares.length - ship.length + 1));
+    
+                // Check if any of the squares in the ship's path are taken or at grid edges
+                isTaken = current.some(index => {
+                    const square = userSquares[randomStart + index];
+                    return !square || square.classList.contains('taken');
+                });
+    
+                isAtRightEdge = current.some(index => (randomStart + index) % width === width - 1);
+                isAtLeftEdge = current.some(index => (randomStart + index) % width === 0);
+    
+            } while (isTaken || (isAtRightEdge && isAtLeftEdge));
+    
+            // Place the ship if conditions are met
+            current.forEach(index => userSquares[randomStart + index].classList.add('taken', ship.name));
         });
     }
+    
 
-    // Game loop
+  // Game loop
     function playGame() {
         turnDisplay.textContent = "Your turn";
         computerGrid.addEventListener('click', event => {
             if (currentPlayer === 'user' && !isGameOver) {
                 const squareId = event.target.dataset.id;
                 handleUserShot(computerSquares[squareId]);
+                if (!isGameOver) { // Proceed with computer's turn if the game is not over
+                    setTimeout(computerShot, 1000); // Delay computer's shot for 1 second
+                }
             }
         });
     }
