@@ -84,7 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
     generateRandomShips(); // Generate user ships
     generateCPUShips(); // Generate CPU ships
     playGame();
+    computerGrid.classList.add("hidden"); // Add the 'hidden' class to hide CPU's grid at the start of the game
   }
+
   function restartGame() {
     // Remove ships from both grids
     userSquares.forEach((square) => {
@@ -299,6 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
     isGameOver = true;
     turnDisplay.textContent = "Game Over";
     startButton.disabled = true;
+    computerGrid.classList.add("hidden"); // Add the 'hidden' class to hide CPU's grid
   }
 
   // Rotate ships

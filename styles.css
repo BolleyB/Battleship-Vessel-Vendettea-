@@ -1,4 +1,18 @@
-/* Add this CSS to your existing styles.css file or create a new one */
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center; /* Center both horizontally and vertically */
+  min-height: 100vh; /* Ensure full height */
+  background-color: beige;
+  font-family: "Protest Revolution", sans-serif;
+}
+
+.container {
+  text-align: center; /* Center content inside container */
+  justify-content: center;
+  align-items: center;
+}
 
 /* Game grid styling */
 .grid-user,
@@ -10,6 +24,9 @@
   height: 300px; /* Adjust height as needed */
   border: 2px solid #000;
   margin-bottom: 20px;
+  align-content: center;
+  margin-top: 20px;
+  margin-left: 50px;
 }
 
 .grid-user {
@@ -64,8 +81,6 @@ button:hover {
   color: red;
 }
 
-/* Add this CSS to your existing styles.css file or create a new one */
-
 /* Ship styling */
 .destroyer,
 .submarine,
@@ -110,7 +125,16 @@ button:hover {
   pointer-events: none; /* Disable pointer events for fired squares */
 }
 
-.grid-computer.hidden {
-  display: none;
+/* Hide CPU ships visually but keep them interactable */
+.grid-computer .destroyer,
+.grid-computer .submarine,
+.grid-computer .cruiser,
+.grid-computer .battleship,
+.grid-computer .carrier {
+  background-color: transparent; /* Set ships' color to transparent */
 }
 
+/* Show red color for hit squares */
+.grid-computer .hit {
+  background-color: #ff0000; /* Red color for hit squares */
+}
