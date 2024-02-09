@@ -4,11 +4,13 @@ body {
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
   min-height: 100vh; /* Ensure full height */
-  background-color: beige;
+  background-color: #353935; /* Onyx for Background */
   font-family: "Protest Revolution", sans-serif;
+  color: #469192;
 }
 
 .container {
+  display: flex;
   text-align: center; /* Center content inside container */
   justify-content: center;
   align-items: center;
@@ -25,16 +27,16 @@ body {
   border: 2px solid #000;
   margin-bottom: 20px;
   align-content: center;
-  margin-top: 20px;
-  margin-left: 50px;
+  margin-top: 20px; 
+  margin-left: 50px; /* Margin to center grid */
 }
 
 .grid-user {
-  background-color: #b3d9ff; /* Light blue for user grid */
+  background-color: #023020; /* Dark Green for user grid */
 }
 
 .grid-computer {
-  background-color: #ffb3b3; /* Light red for computer grid */
+  background-color:#301934; /* Dark Purple for computer grid */
 }
 
 .grid-user div,
@@ -57,11 +59,12 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #4caf50;
+  background-color: #919246; /* Army Green for Buttons */
   color: white;
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  font-family: "Protest Revolution", sans-serif;
 }
 
 button:hover {
