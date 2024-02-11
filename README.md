@@ -12,3 +12,7 @@ My favorite part of the code so far is the generate random ship indx function. I
 I will also add multiplayer to this so that two people on the same machine or diffferent machines can play. Im still polishing this and those are features that will come later in the process.
 
 Hope you enjoy what I have so far it has been a good time building this project.
+![main menu](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/dbe26a17-e3e2-4747-833c-0e5a5fc1fbe2)
+![cpu miss](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/705a1132-32ac-4146-8076-582c3b4798ce)
+![cpu hit ship](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/1d178d4a-bfaa-4627-8e8e-85b54a87f1a0)
+![ship randomly generated](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/c6188f41-1697-48f9-9ee5-1ff1f2bc13b9)
