@@ -1,4 +1,4 @@
-![cpu miss 1](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/da40a79d-d3d3-4709-ab15-dea4378277ff)Hello!
+Hello!
 
 LINK TO GAME: https://bolleyb.github.io/Battleship-Vessel-Vendettea-/
 
