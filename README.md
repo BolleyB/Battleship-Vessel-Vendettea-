@@ -1,4 +1,4 @@
-Hello!
+![cpu miss 1](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/da40a79d-d3d3-4709-ab15-dea4378277ff)Hello!
 
 LINK TO GAME: https://bolleyb.github.io/Battleship-Vessel-Vendettea-/
 
@@ -12,7 +12,9 @@ My favorite part of the code so far is the generate random ship indx function. I
 I will also add multiplayer to this so that two people on the same machine or diffferent machines can play. Im still polishing this and those are features that will come later in the process.
 
 Hope you enjoy what I have so far it has been a good time building this project.
-![main menu](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/dbe26a17-e3e2-4747-833c-0e5a5fc1fbe2)
-![cpu miss](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/705a1132-32ac-4146-8076-582c3b4798ce)
-![cpu hit ship](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/1d178d4a-bfaa-4627-8e8e-85b54a87f1a0)
-![ship randomly generated](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/c6188f41-1697-48f9-9ee5-1ff1f2bc13b9)
+
+![main menu1](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/6e18bc3e-b11f-440e-9b6a-3ccb3a3cad62)
+
+![cpu miss 1](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/c945f01a-0580-481c-b332-e026af9ad860)
+
+![cpu hit1](https://github.com/BolleyB/Battleship-Vessel-Vendettea-/assets/112034998/2b6cbd6c-a4ec-4705-8483-78cb2497aeef)
